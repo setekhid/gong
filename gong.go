@@ -20,8 +20,8 @@ type NodeInfo struct {
 	Hostname   string `json:"hostname"`
 	LuaVersion string `json:"lua_version"`
 	Plugins    struct {
-		AvailableOnServer []string `json:"available_on_server"`
-		EnableInCluster   []string `json:"enable_in_cluster"`
+		AvailableOnServer map[string]interface{} `json:"available_on_server"`
+		EnableInCluster   map[string]interface{} `json:"enable_in_cluster"`
 	} `json:"plugins"`
 	Configuration map[string]interface{} `json:"configuration"`
 	Tagline       string                 `json:"tagline"`
